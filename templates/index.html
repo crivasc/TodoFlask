@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mx-auto p-6">
+        <form method="POST">
+            <input name="todo" class="border shadow p-2 w-full" placeholder="What needs to be done?">
+            <button class="p-2 bg-blue-300 mt-2" type="submit">Submit</button>
+        </form>
+        <ul>
+            {% for todo in todos %}
+            <li class="border shadow p-2 mt-2">{{ todo }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
